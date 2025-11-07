@@ -6,15 +6,12 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import Dox from "./pages/Dox";
-import Waitlist from "./pages/Waitlist";
 
 function Router() {
   return (
     <Switch>
       <Route path={"/"} component={Dox} />
       <Route path={"/home"} component={Home} />
-      <Route path={"/waitlist"} component={Waitlist} />
-      <Route path={"/lista-espera"} component={Waitlist} />
       <Route path={"/404"} component={NotFound} />
       {/* Final fallback route */}
       <Route component={NotFound} />

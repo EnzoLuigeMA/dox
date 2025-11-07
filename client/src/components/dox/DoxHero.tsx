@@ -126,13 +126,13 @@ export default function DoxHero() {
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div
+          <motion.div 
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 md:mb-16 px-4 md:px-0 w-full sm:w-auto"
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.8 }}
           >
-            <Button
+            <Button 
               size="lg"
               className="btn-gradient text-white font-semibold px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto min-h-[56px]"
               onClick={scrollToOffer}
@@ -140,14 +140,14 @@ export default function DoxHero() {
               Quero Ser Fluente
               <ArrowRight className="ml-2" size={20} />
             </Button>
-            <Button
+            <Button 
               size="lg"
               variant="outline"
-              className="border-orange-500 text-orange-500 hover:bg-orange-600 hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto min-h-[56px]"
-              onClick={() => window.location.href = '/waitlist'}
+              className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white px-6 sm:px-8 py-4 sm:py-6 text-base sm:text-lg w-full sm:w-auto min-h-[56px]"
+              onClick={() => scrollToOffer()}
             >
-              Lista de Espera
-              <ArrowRight className="ml-2" size={20} />
+              <Play className="mr-2" size={20} />
+              Ver Demonstração
             </Button>
           </motion.div>
 
