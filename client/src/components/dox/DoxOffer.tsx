@@ -87,13 +87,24 @@ export default function DoxOffer() {
             {/* Countdown Timer */}
             <Countdown minutes={5} />
 
-            <Button 
-              size="lg"
-              className="btn-gradient text-white font-bold px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl md:text-2xl w-full md:w-auto hover:scale-105 transition-transform min-h-[64px]"
-              onClick={() => window.open('https://pay.kiwify.com.br/S2N3ibg', '_blank')}
-            >
-              👉 Quero me matricular agora
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="btn-gradient text-white font-bold px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl md:text-2xl w-full md:w-auto hover:scale-105 transition-transform min-h-[64px]"
+                onClick={() => window.open('https://pay.kiwify.com.br/S2N3ibg', '_blank')}
+              >
+                👉 Quero me matricular agora
+              </Button>
+
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white font-bold px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl md:text-2xl w-full md:w-auto hover:scale-105 transition-transform min-h-[64px]"
+                onClick={() => window.location.href = '/waitlist'}
+              >
+                📋 Entrar na Lista de Espera
+              </Button>
+            </div>
 
             <p className="text-gray-400 mt-6 text-sm">
               ✓ Acesso imediato após a confirmação do pagamento
