@@ -17,7 +17,18 @@ export default defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['@supabase/supabase-js'],
+    include: [
+      '@supabase/supabase-js',
+      '@supabase/postgrest-js',
+      '@supabase/realtime-js',
+      '@supabase/storage-js',
+      '@supabase/functions-js',
+      '@supabase/auth-js'
+    ],
+    force: true,
+  },
+  ssr: {
+    noExternal: ['@supabase/supabase-js'],
   },
   envDir: path.resolve(import.meta.dirname),
   root: path.resolve(import.meta.dirname, "client"),
